@@ -1,0 +1,86 @@
+.homePage {
+  display: none;
+}
+
+/*primera pagina*/
+
+body {
+  background-image: url("fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-logo {
+  margin-top: 10px;
+  width: 95px;
+  height: 120px;
+}
+
+h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+}
+h2 {
+  margin-top: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 42px;
+  color: white;
+  text-align: center;
+}
+header {
+  text-align: center;
+}
+.button-HTML,
+.button-CSS,
+.button-JS {
+  width: 160px;
+  height: 160px;
+}
+#root {
+  width: auto;
+  height: 320px;
+  margin-top: 40px;
+  margin-left: 180px;
+  margin-right: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.HTML,
+.JS {
+  align-self: flex-end;
+}
+
+/*pagina final*/
+.endPage {
+  position: absolute;
+  top: 10px;
+}
+.block-win {
+  background-image: url("fondoGanador.png");
+  background-size: 1200px 400px;
+  margin-left: 50px;
+  width: 1200px;
+  height: 400px; 
+  /* opacity: 0.5; */
+}
+.button-newLevel {
+  width: 100px;
+  height: 60px;
+  background: rgba(43, 222, 234, 0.8);
+  border: 2px solid #1265b0;
+  box-sizing: border-box;
+  border-radius: 100px;
+}
+.newLevel{
+    display: flex;
+    justify-content: center;
+}
