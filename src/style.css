@@ -1,0 +1,112 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(fondo.jpg); 
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+input{
+    
+   width: 123px;
+    height: 145px;
+    margin-top:0 ;
+    margin-left: 0;
+}
+.juegoMemoria{    
+    height: auto;
+    margin-top: 94px;
+    margin-left: 21px;
+    display: flex;/*pantalla flexible se alinean de izquierda a derecha*/
+    flex-direction: row;/* dirección en fila*/
+    flex-wrap: wrap;/* orden en una sola fila*/
+    justify-content: space-around;/*justificar el contenido:
+    espacio alrededor rearte todo el contenido desde elcentro hacia la derecha y hacia la izquierda*/
+    align-items: center;
+}
+.memory-card{
+      flex-basis: 100px;/*ancho de la caja*/
+      position: relative;
+}
+.inicio{
+    display: none;
+}
+.categoriaHtml{
+    display: none;
+}
+.categoriaCss{
+    display: none;
+}
+.categoriaJs{
+    display: block;
+}
+
+
+.mitadRobot{
+    position: relative;
+    width: 200px;
+    height: 159px;
+    left: 648px;
+    top: 37px;
+}
+.tituloCategorias{
+    position: absolute;
+    width: 555px;
+    height: 82px;
+    left: 461px;
+    top: 209px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 82px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+#root{
+    position: absolute;    
+    width: 1258px;
+    height: 670px;
+    left: 91px;
+    top: 306px;
+    background: rgba(19, 114, 167, 0.4);
+    border-radius: 100px;
+}
+p{  
+    position: absolute;
+    width: 527px;
+    height: 70px;
+    left: 425px;
+    top: -1px;    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 70px;    
+    color: #0689FF;
+}
+#reloj{
+    position: absolute;
+    width: 233px;
+    height: 59px;
+    left: 583px;
+    top: 876px;
+    font-size: 50px;
+    line-height: 59px;      
+    text-align: center;    
+    color: #FFFFFF;
+}
+.botonInicio{
+    position: absolute;
+    width: 159.73px;
+    height: 101.63px;
+    left: 1088.73px;
+    top: 839.63px;
+    border: 1px solid rgba(167, 68, 244, 0.6);
+    box-sizing: border-box;
+    
+   
+}
