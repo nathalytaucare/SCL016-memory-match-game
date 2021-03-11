@@ -1,10 +1,27 @@
+/* vistas */
 .homePage {
   display: none;
+}
+.categoriaHtml{
+    display: block;
+}
+.categoriaCss{
+    display: none;
+}
+.categoriaJs{
+    display: none;
+}
+.endPage{
+    display: none;
+}
+*{
+    margin: 0;
+    padding: 0;
 }
 
 /*primera pagina*/
 
-body {
+.homePage,.categoriaHtml,.endPage {
   background-image: url("fondo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,7 +33,7 @@ body {
   height: 120px;
 }
 
-h1 {
+.titleHomePage {
   margin-top: 0px;
   margin-bottom: 0px;
   font-family: Raleway;
@@ -25,7 +42,8 @@ h1 {
   font-size: 50px;
   color: white;
 }
-h2 {
+
+.subtitleHomePage {
   margin-top: 10px;
   font-family: Roboto;
   font-style: normal;
@@ -37,14 +55,20 @@ h2 {
 }
 header {
   text-align: center;
-}
+} 
+input{
+     width: 123px;
+     height: 145px;
+     margin-top:0 ;
+     margin-left: 0;
+ }
 .button-HTML,
 .button-CSS,
 .button-JS {
   width: 160px;
   height: 160px;
 }
-#root {
+.rootbuttons {
   width: auto;
   height: 320px;
   margin-top: 40px;
@@ -70,7 +94,6 @@ header {
   margin-left: 50px;
   width: 1200px;
   height: 400px; 
-  /* opacity: 0.5; */
 }
 .button-newLevel {
   width: 100px;
@@ -83,4 +106,92 @@ header {
 .newLevel{
     display: flex;
     justify-content: center;
+} 
+
+/* segunda pantalla */
+
+.juegoMemoria{    
+    height: auto;
+    margin-top: 94px;
+    margin-left: 21px;
+    display: flex;/*pantalla flexible se alinean de izquierda a derecha*/
+    flex-direction: row;/* dirección en fila*/
+    flex-wrap: wrap;/* orden en una sola fila*/
+    justify-content: space-around;/*justificar el contenido:
+    espacio alrededor rearte todo el contenido desde elcentro hacia la derecha y hacia la izquierda*/
+    /* align-items: center;  */
+} 
+
+.memory-card{
+      flex-basis: 100px;/*ancho de la caja*/
+      position: relative;
+      margin-top: 2%;
+     
 }
+.mitadRobot{
+    position: relative;
+    flex-basis: 200px;/*ancho de la caja*/
+   
+    height: 159px;
+    /* left: 400px; */
+    top: 37px;
+}
+.tituloCategorias{
+    position: absolute; 
+    flex-basis: 555px;/*ancho de la caja*/
+    height: 82px;
+    left: 400px;
+    top: 209px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 82px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+#root{
+    /* position: absolute;     */
+    flex-basis: 1240px;/*ancho de la caja*/
+    height: 500px; 
+    padding: 0px 40px;
+    /* left: 40px;
+    top: 306px; */
+    background: rgba(19, 114, 167, 0.4);
+    border-radius: 100px;
+} 
+p{  
+    position: absolute;
+    flex-basis: 527px;/*ancho de la caja*/
+    height: 70px;
+    left: 390px;
+    top: -1px;    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 70px;    
+    color: #0689FF;
+}
+#reloj{
+    position: absolute;
+    flex-basis: 233px;/*ancho de la caja*/
+    height: 59px;
+    left: 583px;
+    top: 876px;
+    font-size: 50px;
+    line-height: 59px;      
+    text-align: center;    
+    color: #FFFFFF;
+}
+/* .botonInicio{
+    position: absolute;
+    width: 159.73px;
+    height: 101.63px;
+    left: 1088.73px;
+    top: 839.63px;
+    border: 1px solid rgba(167, 68, 244, 0.6);
+    box-sizing: border-box;
+   
+} */
