@@ -1,5 +1,5 @@
 export default {
-    name: 'cartasMemoria',
+    name: 'htmlNivelUno',
     items: [
       { id: 'htmlNivel1,1,1', image: 'HTML nivel 1\agua.png', class:"carta1" },
       { id: 'htmlNivel1,1,2', image: 'HTML nivel 1\agua1.png', class:"carta1"  },
@@ -19,3 +19,4 @@ export default {
       { id: 'htmlNivel1,8,2', image: 'HTML nivel 1\verde1.png', class:"carta8" },
     ],
   };
+  
