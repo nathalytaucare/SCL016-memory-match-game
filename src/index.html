@@ -8,13 +8,25 @@
 </head>
 
 <body>
-  <div class="inicio">
+  <div class="homePage">
     <header>
-      <img src="robot.png" alt="">
-      <h1 class="tituloPrincipal">Memory Card</h1>
+      <img class="img-logo" src="Logo robot.png" alt="logo de un robot">
+      <h1 class="titleHomePage">MEMORY CODE</h1>
+      <h2 class="subtitleHomePage">Aprende a programar divirtiendote</h2>
     </header>
-
-    <button>volver</button>
+    <main>
+      <div id="rootbuttons" class="rootbuttons">
+        <div class="HTML">
+          <input type="image" src="botonHTML.png" alt="boton para ingresar a HTML" class="button-HTML">
+        </div>
+        <div class="CSS">
+          <input type="image" src="botonCSS.png" alt="Boton para ingresar a CSS" class="button-CSS">
+        </div>
+        <div class="JS">
+          <input type="image" src="botonJS.png" alt="boton para ingresar a JS" class="button-JS">
+        </div>
+      </div>
+    </main>
   </div>
 
 
@@ -29,213 +41,41 @@
     <main>
       <div id="root">
         <p>Memoriza los pares</p>
-        <section class="juegoMemoria">
-          <div class=" memory-card">
-            <input type="image" src="cartas\HTML.png" alt="">
+        <div id="cronometro">
+          <div id="reloj">
+            0 00 00 00
           </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\HTML.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\HTML.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\HTML.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\HTML.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\HTML.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\HTML.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\HTML.png" alt="">
-          </div>
-        </section>
-        <section class="juegoMemoria">
-          <div class=" memory-card">
-            <input type="image" src="cartas\HTML.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\HTML.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\HTML.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\HTML.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\HTML.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\HTML.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\HTML.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\HTML.png" alt="">
-          </div>
-        </section>
-      </div>
-      <div id="cronometro">
-        <div id="reloj">
-          0 00 00 00
         </div>
-      </div>
     </main>
   </div>
 
-  <!-- categoria Css-->
 
-  <div class="categoriaCss">
+
+  <!-- ventana final -->
+  <div class="endPage">
     <header>
-      <img src="cartas\mitadRobot.png" class="mitadRobot" alt="imagen de robot">
-      <h1 class="tituloCategorias">MEMORY CODE</h1>
+      <img class="img-logo" src="logoRobotMini.png" alt="logo de un robot">
+      <h1 class="tituloCategorias">Memory Code</h1>
     </header>
     <main>
-      <div id="root">
-        <p>Memoriza los pares</p>
-        <section class="juegoMemoria">
-          <div class=" memory-card">
-            <input type="image" src="cartas\CSS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\CSS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\CSS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\CSS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\CSS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\CSS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\CSS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\CSS.png" alt="">
-          </div>
-        </section>
-        <section class="juegoMemoria">
-          <div class=" memory-card">
-            <input type="image" src="cartas\CSS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\CSS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\CSS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\CSS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\CSS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\CSS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\CSS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\CSS.png" alt="">
-          </div>
-        </section>
-      </div>
-      <div id="cronometro">
-        <div id="reloj">
-          0 00 00 00
+      <div class="block-win">
+        <h2> ¡Felicitaciones has pasado al siguiente nivel!</h2>
+        <h2>¿estas listo?</h2>
+        <div class="newLevel">
+          <button type="button" id="button-newLevel" class="button-newLevel">Comencemos</button>
         </div>
+        <id id="rootbuttons" class="rootbuttons">
+          <div>
+            <input type="image" src="botonHTML.png" alt="boton para ingresar a HTML" class="button-HTML">
+          </div>
+          <div>
+            <input type="image" src="botonCSS.png" alt="Boton para ingresar a CSS" class="button-CSS">
+          </div>
+          <div>
+            <input type="image" src="botonJS.png" alt="boton para ingresar a JS" class="button-JS">
+          </div>
       </div>
     </main>
-  </div>
-
-  <!-- categoria Js-->
-
-  <div class="categoriaJs">
-    <header>
-      <img src="cartas\mitadRobot.png" class="mitadRobot" alt="imagen de robot">
-      <h1 class="tituloCategorias">MEMORY CODE</h1>
-    </header>
-    <main>
-      <div id="root">
-        <p>Memoriza los pares</p>
-        <section class="juegoMemoria">
-          <div class=" memory-card">
-            <input type="image" src="cartas\JS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\JS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\JS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\JS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\JS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\JS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\JS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\JS.png" alt="">
-          </div>
-        </section>
-        <section class="juegoMemoria">
-          <div class=" memory-card">
-            <input type="image" src="cartas\JS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\JS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\JS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\JS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\JS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\JS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\JS.png" alt="">
-          </div>
-          <div class=" memory-card">
-            <input type="image" src="cartas\JS.png" alt="">
-          </div>
-        </section>
-      </div>
-      <div id="cronometro">
-        <div id="reloj">
-          0 00 00 00
-        </div>
-      </div>
-    </main>
-  </div>
-
-
-  </div>
-  <input type="image" class="botonInicio" src="botonInicio.png" alt="boton de inicio">
-  </main>
   </div>
   <script src="main.js" type="module"></script>
 </body>
