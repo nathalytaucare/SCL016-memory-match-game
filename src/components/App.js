@@ -13,7 +13,6 @@
 //   .then(console.log)
 //   .catch(console.error);
 //
-
 const App = () => {
   const el = document.createElement('div');
 
