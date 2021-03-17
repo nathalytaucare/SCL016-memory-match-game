@@ -1,1 +1,251 @@
+.homePage {
+  display: none;
+}
+.categoriaHtml {
+  display: none;
+}
+.endPage {
+  display: block;
+}
+* {
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(img/fondo.png); /* Ubicación de la imagen */
+  background-repeat: no-repeat;
+  background-position: center center; /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
+  background-attachment: fixed; /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+  background-size: cover; /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+  background-color: purple; /* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
+}
 
+header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+
+}
+/* .menu{
+  display: flex;
+  flex-flow: column nowrap;
+  height:100px}
+  .logo{
+    flex: 1 1 auto;
+    height:50px;}
+    .nav{
+      flex:5 1 auto;
+      height:50px;}
+      .social{
+        flex:1 1 auto;
+        height:50px;}
+    */
+.robot {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-self: center;
+}
+.img-logo {
+  width: 100%;
+  max-width: 140px;
+  height: 175px;
+  background-size: cover;
+}
+.titulo1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+}
+.titleHomePage {
+  display: flex;
+  width: 100%;
+  max-width: 555px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  text-align: justify; /*responsive*/
+}
+.sub-titulo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+}
+.subtitleHomePage {
+  display: flex;
+  width: 100%;
+  max-width: 856px;
+  height: 42px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  color: #ffffff;
+}
+
+.rootbuttons {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  width: auto;
+  height: 400px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.HTML,
+.JS {
+  align-self: flex-end;
+}
+.button-HTML,
+.button-JS,
+.button-CSS {
+  width: 180px;
+}
+/* main{
+  width: 100%;
+} 
+
+.categoriaHtml{
+  width: 100%;
+
+}  */
+ 
+.mitadRobot {
+  width: 100%;
+  max-width: 200px;
+  min-width: 20px;
+  height: 175px;
+  background-size: cover;
+}
+
+/* @media all and ( min-width : 600px){
+  .main{
+    flex: 1 1 auto;
+  }
+}
+ */
+ .button-HTML2 {
+  width: 20%;
+  max-width: 200px;
+  background-size: cover;
+}
+.button-JS2 {
+  width: 20%;
+  max-width: 200px;
+  height: auto;
+
+  background-size: cover;
+}
+
+.mesaDeJuego{    
+  width: 100%;
+  max-width: 1440px;
+  height: 450px;
+  background: rgba(19, 114, 167, 0.4);
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap ;
+  justify-content: center;
+  background-size: cover;
+  
+
+}
+p{
+  /* width: 527px;
+  height: 70px; */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  /* line-height: 70px;     */
+  color: #0689FF;
+  text-align: justify;/* responsive*/
+}
+.contenedor-tiempo{
+  float: left;/* uno al lado del otro*/
+  text-align: right;
+  width:50%;
+  height: 59px;
+  font-size: 50px;
+  line-height: 59px;      
+  text-align: center;    
+  color: #FFFFFF;
+}
+.pieRoot{
+  align-items:flex-end ;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.botonInicio{
+  width: 15%;
+  height: 80px;
+  border: 1px solid rgba(167, 68, 244, 0.6);
+  box-sizing: border-box;
+
+ 
+}
+.newLevel{
+  display: flex;
+  justify-content: center;
+} 
+
+ .button-newLevel {
+  
+  width: 200px;
+  height: 80px;
+  
+}
+ .block-win {
+  width: 90%;
+  margin: auto;
+  height: 550px;
+  flex-direction: column;
+  background: url(img/fondoGanador.png);
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover; 
+  background-repeat: no-repeat;  
+  border-radius: 50px;
+
+} 
+.titulos{
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+
+}
+.subtitleEndPage{
+  width: 100%;
+  max-width: 1000px;
+  height: 42px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  color: #ffffff;
+}
+.rootbuttons1{
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: flex-end;
+  width: auto;
+  height: 250px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
