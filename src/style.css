@@ -1,12 +1,13 @@
 .homePage {
   display: none;
 }
-.categoriaHtml {
+.htmlCategory {
   display: none;
 }
 .endPage {
   display: block;
 }
+/* Diseño todas las páginas */
 * {
   margin: 10px;
   padding-left: 10px;
@@ -26,35 +27,23 @@ header {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-
 }
-/* .menu{
-  display: flex;
-  flex-flow: column nowrap;
-  height:100px}
-  .logo{
-    flex: 1 1 auto;
-    height:50px;}
-    .nav{
-      flex:5 1 auto;
-      height:50px;}
-      .social{
-        flex:1 1 auto;
-        height:50px;}
-    */
+
+/* Página de inicio */
+
 .robot {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-self: center;
 }
-.img-logo {
+.imgLogo {
   width: 100%;
   max-width: 140px;
   height: 175px;
   background-size: cover;
 }
-.titulo1 {
+.title {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -71,7 +60,7 @@ header {
   color: #ffffff;
   text-align: justify; /*responsive*/
 }
-.sub-titulo{
+.subtitle {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -105,21 +94,15 @@ header {
 .JS {
   align-self: flex-end;
 }
-.button-HTML,
-.button-JS,
-.button-CSS {
+.buttonHTML,
+.buttonJS,
+.buttonCSS {
   width: 180px;
 }
-/* main{
-  width: 100%;
-} 
 
-.categoriaHtml{
-  width: 100%;
+/* Página categoria Html */
 
-}  */
- 
-.mitadRobot {
+.halfRobot {
   width: 100%;
   max-width: 200px;
   min-width: 20px;
@@ -127,26 +110,7 @@ header {
   background-size: cover;
 }
 
-/* @media all and ( min-width : 600px){
-  .main{
-    flex: 1 1 auto;
-  }
-}
- */
- .button-HTML2 {
-  width: 20%;
-  max-width: 200px;
-  background-size: cover;
-}
-.button-JS2 {
-  width: 20%;
-  max-width: 200px;
-  height: auto;
-
-  background-size: cover;
-}
-
-.mesaDeJuego{    
+.gameTable {
   width: 100%;
   max-width: 1440px;
   height: 450px;
@@ -154,59 +118,47 @@ header {
   border-radius: 100px;
   display: flex;
   flex-direction: column;
-  flex-wrap:wrap ;
+  flex-wrap: wrap;
   justify-content: center;
   background-size: cover;
-  
-
 }
-p{
-  /* width: 527px;
-  height: 70px; */
+
+p {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
-  /* line-height: 70px;     */
-  color: #0689FF;
-  text-align: justify;/* responsive*/
+  color: #0689ff;
+  text-align: justify; /* responsive*/
 }
-.contenedor-tiempo{
-  float: left;/* uno al lado del otro*/
-  text-align: right;
-  width:50%;
-  height: 59px;
-  font-size: 50px;
-  line-height: 59px;      
-  text-align: center;    
-  color: #FFFFFF;
-}
-.pieRoot{
-  align-items:flex-end ;
+
+.footerRoot {
+  align-items: flex-end;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.botonInicio{
+.timeContainer {
+  float: left; /* uno al lado del otro*/
+  text-align: right;
+  width: 50%;
+  height: 59px;
+  font-size: 50px;
+  line-height: 59px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.startButton {
   width: 15%;
   height: 80px;
   border: 1px solid rgba(167, 68, 244, 0.6);
   box-sizing: border-box;
-
- 
 }
-.newLevel{
-  display: flex;
-  justify-content: center;
-} 
 
- .button-newLevel {
-  
-  width: 200px;
-  height: 80px;
-  
-}
- .block-win {
+/* Página final */
+
+.blockWin {
   width: 90%;
   margin: auto;
   height: 550px;
@@ -214,20 +166,20 @@ p{
   background: url(img/fondoGanador.png);
   background-position: center center;
   background-attachment: fixed;
-  background-size: cover; 
-  background-repeat: no-repeat;  
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 50px;
+}
 
-} 
-.titulos{
+.titlesEndPage {
   flex-direction: column;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-self: center;
-
 }
-.subtitleEndPage{
+
+.subtitleEndPage {
   width: 100%;
   max-width: 1000px;
   height: 42px;
@@ -238,14 +190,44 @@ p{
   line-height: 42px;
   color: #ffffff;
 }
-.rootbuttons1{
+
+.newLevel {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonNewLevel {
+  width: 200px;
+  height: 80px;
+}
+
+.rootbuttonsEnd {
   flex-wrap: wrap;
   justify-content: center;
   align-self: flex-end;
   width: auto;
   height: 250px;
-
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
+
+/* .button-HTML2 {
+  width: 20%;
+  max-width: 200px;
+  background-size: cover;
+}
+
+.button-JS2 {
+  width: 20%;
+  max-width: 200px;
+  height: auto;
+  background-size: cover;
+} */
+
+/* @media all and ( min-width : 600px){
+  .main{
+    flex: 1 1 auto;
+  }
+}
+ */

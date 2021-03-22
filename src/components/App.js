@@ -6,8 +6,6 @@
 // console.log(pokemon);
 import htmlNivelUno from '../data/htmlNivelUno/htmlNivelUno.js';
 console.log(htmlNivelUno);
-import htmlNivelDos from '../data/htmlNivelDos/htmlNivelDos.js';
-console.log(htmlNivelDos);
 //
 // O alternativamente podríamos cargar el JSON de forma asíncrona usando
 // `fetch` en el momento que consideremos necesario.
