@@ -1,0 +1,235 @@
+
+.homePage {
+  display: none;
+}
+.htmlCategory {
+  display: none;
+}
+.endPage {
+  display: block;
+}
+/* Diseño todas las páginas */
+* {
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(img/fondo.png); /* Ubicación de la imagen */
+  background-repeat: no-repeat;
+  background-position: center center; /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
+  background-attachment: fixed; /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+  background-size: cover; /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+  background-color: purple; /* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
+}
+
+header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+/* Página de inicio */
+
+.robot {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-self: center;
+}
+.imgLogo {
+  width: 100%;
+  max-width: 140px;
+  height: 175px;
+  background-size: cover;
+}
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+}
+.titleHomePage {
+  display: flex;
+  width: 100%;
+  max-width: 555px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  text-align: justify; /*responsive*/
+}
+.subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+}
+.subtitleHomePage {
+  display: flex;
+  width: 100%;
+  max-width: 856px;
+  height: 42px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  color: #ffffff;
+}
+
+.rootbuttons {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  width: auto;
+  height: 400px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.HTML,
+.JS {
+  align-self: flex-end;
+}
+.buttonHTML,
+.buttonJS,
+.buttonCSS {
+  width: 180px;
+}
+
+/* Página categoria Html */
+
+.halfRobot {
+  width: 100%;
+  max-width: 200px;
+  min-width: 20px;
+  height: 175px;
+  background-size: cover;
+}
+
+.gameTable {
+  width: 100%;
+  max-width: 1440px;
+  height: 450px;
+  background: rgba(19, 114, 167, 0.4);
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-size: cover;
+}
+
+p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  color: #0689ff;
+  text-align: justify; /* responsive*/
+}
+
+.footerRoot {
+  align-items: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.timeContainer {
+  float: left; /* uno al lado del otro*/
+  text-align: right;
+  width: 50%;
+  height: 59px;
+  font-size: 50px;
+  line-height: 59px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.startButton {
+  width: 15%;
+  height: 80px;
+  border: 1px solid rgba(167, 68, 244, 0.6);
+  box-sizing: border-box;
+}
+
+/* Página final */
+
+.blockWin {
+  width: 90%;
+  margin: auto;
+  height: 550px;
+  flex-direction: column;
+  background: url(img/fondoGanador.png);
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+}
+
+.titlesEndPage {
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+}
+
+.subtitleEndPage {
+  width: 100%;
+  max-width: 1000px;
+  height: 42px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  color: #ffffff;
+}
+
+.newLevel {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonNewLevel {
+  width: 200px;
+  height: 80px;
+}
+
+.rootbuttonsEnd {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: flex-end;
+  width: auto;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* .button-HTML2 {
+  width: 20%;
+  max-width: 200px;
+  background-size: cover;
+}
+
+.button-JS2 {
+  width: 20%;
+  max-width: 200px;
+  height: auto;
+  background-size: cover;
+} */
+
+/* @media all and ( min-width : 600px){
+  .main{
+    flex: 1 1 auto;
+  }
+}
+ */
+

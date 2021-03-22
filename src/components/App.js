@@ -8,6 +8,7 @@ import htmlNivelUno from '../data/htmlNivelUno/htmlNivelUno.js';
 console.log(htmlNivelUno);
 // import htmlNivelDos from '../data/htmlNivelDos/htmlNivelDos.js';
 // console.log(htmlNivelDos);
+
 //
 // O alternativamente podríamos cargar el JSON de forma asíncrona usando
 // `fetch` en el momento que consideremos necesario.
@@ -18,16 +19,12 @@ console.log(htmlNivelUno);
 //   .catch(console.error);
 //
 
-
-
 // for (const items of htmlNivelUno.items){
 //   categoriaHtml1.push(items.id,items.id);
 // }
 // const cartasHTML1=[];
 // let turnos;
 // turnos=10;
-
-
 
 const App = () => {
   // const grid= document.querySelector(".root");
