@@ -1,11 +1,10 @@
 //
-// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
+// Para incluir los diferentes sets de cartas podemos importar el archivo
 // JavasSript que contenga el `export` correspondiente...
 //
  //import pokemon from 'data\Data memoria\memoria.js';
 // console.log(pokemon);
-import htmlNivelUno from '../data/htmlNivelUno/htmlNivelUno.js';
-console.log(htmlNivelUno);
+
 // import htmlNivelDos from '../data/htmlNivelDos/htmlNivelDos.js';
 // console.log(htmlNivelDos);
 
@@ -18,60 +17,39 @@ console.log(htmlNivelUno);
 //   .then(console.log)
 //   .catch(console.error);
 //
-
-// for (const items of htmlNivelUno.items){
-//   categoriaHtml1.push(items.id,items.id);
-// }
-// const cartasHTML1=[];
-// let turnos;
-// turnos=10;
-
+import htmlNivelUno from '../data/htmlNivelUno/htmlNivelUno.js';
+ console.log(htmlNivelUno);
+// console.log(htmlNivelUno.items[0].class);
+let cardsInPlay= [];
+let board;
 const App = () => {
-  // const grid= document.querySelector(".root");
-  // // let cardsChosen=[]
-  // // cardsChosenId=[]
-  // function createBoard(){
-  // for (let i = 0; i < array.length; i++) {
-  //   let card= document.createElement("img");
-  //   card= document.createAttribute("scr", "img/HTML.png");
-  //   card.setAttribute("data-id", i);
-  //   // card.addEventListener("click", flipCards);
-  //   grid.appendChild(card);
-  // }
 
-  //  }
-  //  createBoard()
-  //  function flipCards(){
-  //    var cardId=
-
-  //  }
   const el = document.createElement('div');
-
   el.className = 'App';
-  let cardsInPlay= [];
-
+  
   let cards = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
-  let board;
+  
   board = [];
-
+//para barajar las cartas o hacer que las cartas aleatoria al recargar la pagina
   while(cards.length){
     board.push(cards.splice(Math.floor(Math.random() *cards.length), 1)[0]);
-  }
-for (let i = 0; i < board.length; i++) {
-  const cardReverso =  document.createElement("img");
-  cardReverso.setAttribute("src", "img/HTML.png");
-  // cardReverso.setAttribute('data-id', i)
-  el.appendChild(cardReverso);
-  //  cardReverso.addEventListener('click', flipCard)
 
+  }
+//realizamos un ciclo para iterar sobre cada una de las cartas y formar la mesa de juego
+for (let i = 0; i < board.length; i++) {
+  
   const card= document.createElement("img");
   card.setAttribute("src", htmlNivelUno.items[board[i]].image);
-
-
+  console.log(htmlNivelUno.items[board[i]].image);
+  card.setAttribute("class", "back");
+  // Establecemos un data-atributo "cardIndex" para identificar la carta
+  // con el índice del array board
+  card.dataset.cardIndex = htmlNivelUno.items[board[i]].class;
+  card.addEventListener('click', flipCard);
   el.appendChild(card);
-
+  
  }
-
+ 
  
 
 
@@ -79,5 +57,50 @@ for (let i = 0; i < board.length; i++) {
 
  return el;
 };
+
+function flipCard(){
+  // Recuperamos el índice de la carta pulsada del data-atributo "cardIndex"
+  var cardIndex = parseInt(this.dataset.cardIndex);
+  console.log(this);
+  // Coge la clase a utilizar (imagen a mostrar) del array board
+  this.className = "";
+  // Añade la carta a las actualmente seleccionadas
+  cardsInPlay.push({cardElement: this, cardIndex: cardIndex});
+  // Comprueba si hay "match"
+  // Se llama con setTimeout para dejar que el navegador muestre la carta girada primero
+  setTimeout(testMatch, 100);
+}
+
+function testMatch(){
+  // Si no se han seleccionado dos cartas no hace nada
+  if (cardsInPlay.length < 2) return;
+  // Comprueba si las cartas seleccionadas son iguales y llama
+  // a la función correspondiente
+
+  if (board[cardsInPlay[0].cardIndex] === board[cardsInPlay[1].cardIndex]){
+    match();
+  }
+  else{
+    tryAgain();
+  }
+}
+
+// Hay pareja
+function match(){
+  // Eliminamos el controlador del evento click de las cartas
+  cardsInPlay[0].cardElement.removeEventListener('click', flipCard);
+  cardsInPlay[1].cardElement.removeEventListener('click', flipCard);
+  // Inicia una nueva jugada
+  cardsInPlay = [];
+}
+
+// No hay pareja
+function tryAgain(){
+  // Se da vuelta a cierran las dos cartas
+  cardsInPlay[0].cardElement.className = 'back';
+  cardsInPlay[1].cardElement.className = 'back';
+  // Inicia una nueva jugada
+  cardsInPlay = [];
+}
 
 export default App;

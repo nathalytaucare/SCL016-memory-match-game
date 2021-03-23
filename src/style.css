@@ -1,12 +1,18 @@
 
-.homePage {
+/* .homePage {
   display: none;
-}
+} */
 .htmlCategory {
   display: none;
 }
+.cssCategory {
+  display: none;
+}
+.jsCategory {
+  display: none;
+}
 .endPage {
-  display: block;
+  display: none;
 }
 /* Diseño todas las páginas */
 * {
@@ -59,7 +65,7 @@ header {
   font-weight: bold;
   text-align: center;
   color: #ffffff;
-  text-align: justify; /*responsive*/
+  text-align: justify; /responsive/
 }
 .subtitle {
   display: flex;
@@ -230,6 +236,57 @@ p {
   .main{
     flex: 1 1 auto;
   }
-}
- */
+}*/
 
+  .App{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  width: 140%;
+  max-width: 1400px;
+  height: 352px;
+  background-size: cover;
+  justify-content: space-around;
+  align-content: center;
+}
+
+img.back{
+  content: url('img/HTML.png');
+}
+img.back1{
+  content: url('img/CSS.png');
+}
+img.back2{
+  content: url('img/JS.png');
+}
+.carta1, .carta2, .carta3, .carta4,.carta5, .carta6, .carta7, .carta8{
+/* flex-wrap: 1;
+flex-shrink: 3; */
+backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: rotateY(0deg);
+  transition: all 0.3s linear;
+}  
+/* .reverso{
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s linear;
+  transform: rotateY(180deg);
+
+} */
+.root{
+    position: relative;
+  }
+  
+  /* .root:hover .carta1 {
+    transform: rotateY(180deg);
+  }
+  
+  .root:hover .reverso {
+    transform: rotateY(360deg);
+  } */
