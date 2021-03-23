@@ -65,7 +65,7 @@ header {
   font-weight: bold;
   text-align: center;
   color: #ffffff;
-  text-align: justify; /responsive/
+  text-align: justify;
 }
 .subtitle {
   display: flex;
