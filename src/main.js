@@ -1,7 +1,7 @@
 
 import App from './components/App.js';
-// import AppCss from './components/AppCss.js';
-// // import AppJs from './components/AppJs.js';
+import AppCss from './components/AppCss.js';
+import AppJs from './components/AppJs.js';
 
 const buttonHtml =document.getElementById("buttonHtml"); 
 const startButtonHtml = document.getElementById("startButtonHtml");
@@ -87,6 +87,6 @@ startButtonJs.addEventListener("click", homePage);
 
 
 
-document.getElementById("root").appendChild(App());
-// document.getElementById("root1").appendChild(AppCss());
-// document.getElementById("root2").appendChild(AppJs());
+document.getElementById("root").appendChild(App()); 
+document.getElementById("root1").appendChild(AppCss());
+document.getElementById("root2").appendChild(AppJs());
