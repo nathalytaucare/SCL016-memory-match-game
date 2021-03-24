@@ -22,6 +22,11 @@ import jsNivelUno from '../data/jsNivelUno/jsNivelUno.js';
 // console.log(htmlNivelUno.items[0].class);
 let cardsInPlay= [];
 let board;
+
+// let intentos = 0; //contador de intentos
+// let aciertos = 0; //contador de aciertos
+
+let aciertos=0;
 const AppJs = () => {
 
   const el = document.createElement('div');
@@ -36,6 +41,7 @@ const AppJs = () => {
 
   }
 //realizamos un ciclo para iterar sobre cada una de las cartas y formar la mesa de juego
+
 
 
 for (let i = 0; i < board.length; i++) {
@@ -57,9 +63,9 @@ for (let i = 0; i < board.length; i++) {
 
 function flipCard(e){
   // Recuperamos el índice de la carta pulsada del data-atributo "cardIndex"
-  console.log(e.target);
+  // console.log(e.target);
   var cardIndex = parseInt(e.target.dataset.cardIndex);
-  console.log(cardIndex);
+  // console.log(cardIndex);
   // Coge la clase a utilizar (imagen a mostrar) del array board
   e.target.className = "";
   // Añade la carta a las actualmente seleccionadas guaradr abietas
@@ -75,22 +81,60 @@ function testMatch(){
   // Comprueba si las cartas seleccionadas son iguales y llama
   // a la función correspondiente
 
+
+  // aciertos++; //añadimos uno al contador aciertos (contiene los aciertos)
+  // //si el número de aciertos multiplicado por 2 es igual al número de fichas
+  // //se da por teminado el juego
+  // console.log(aciertos);
+  // if ( aciertos * 2 == board) {
+  //   console.log(board)
+  //     //Paramos el cronómetro
+  //     detenerse()
+  //     //mensaje de final de juego
+  //     alert("Bien Jugado ... y solo lo has tenido que intentar "+intentos+" veces\nComo premio un chorizo de cantimpalo!!!" +
+  //         "\nHas tardado en completar el juego "+contador_m+":"+(contador_s-1));
+  // }
+
+
+
+
   if (board[cardsInPlay[0].cardIndex] === board[cardsInPlay[1].cardIndex]){
     match();
   }
   else{
     tryAgain();
   }
+  // document.getElementById("movimientos").innerHTML = intentos;
+    
 }
 
+
+
 // Hay pareja
-function match(){
+
+function match(e){
   // Eliminamos el controlador del evento click de las cartas
   cardsInPlay[0].cardElement.removeEventListener('click', flipCard);
   cardsInPlay[1].cardElement.removeEventListener('click', flipCard);
   // Inicia una nueva jugada
   cardsInPlay = [];
+  // let aciertos= e.target;
+  aciertos++;
+  document.getElementById("aciertos").innerHTML=aciertos;
+if (aciertos==8) {
+  aciertos=0;
+  document.querySelector(".endPage").style.display="block";
+  document.querySelector(".jsCategory").style.display="none";
+  document.querySelector('.htmlCategory').style.display = "none";
+    document.querySelector('.cssCategory').style.display = "none";
+    document.querySelector('.homePage').style.display = "none";
+  
 }
+
+
+}
+
+
 
 // No hay pareja
 function tryAgain(){
@@ -99,6 +143,13 @@ function tryAgain(){
   cardsInPlay[1].cardElement.className = 'back2';
   // Inicia una nueva jugada
   cardsInPlay = [];
+}
+
+
+//Esta función detiene el cronómetro
+var cronometro;
+function detenerse(){
+       clearInterval(cronometro);
 }
 
 export default AppJs;

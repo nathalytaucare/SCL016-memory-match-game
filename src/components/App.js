@@ -89,7 +89,10 @@ function testMatch(){
 }
 
 // Hay pareja
+let aciertos=0;
 function match(){
+ aciertos ++;
+ console.log(aciertos);
   // Eliminamos el controlador del evento click de las cartas
   cardsInPlay[0].cardElement.removeEventListener('click', flipCard);
   cardsInPlay[1].cardElement.removeEventListener('click', flipCard);
@@ -104,6 +107,9 @@ function tryAgain(){
   cardsInPlay[1].cardElement.className = 'back';
   // Inicia una nueva jugada
   cardsInPlay = [];
+  console.log(cardsInPlay);
 }
 
 export default App;
+
+// cifrar += String.fromCharCode(recorrido);

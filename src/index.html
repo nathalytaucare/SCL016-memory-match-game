@@ -60,10 +60,23 @@
         </div>
       </div>
       <div class="footerRoot"></div>
-      <div class="timeContainer" id="timeHtml">
+
+      <form name="datos" id="datos1" action="cartas.html"> <!--formulario de datos y bot�n-->
+        <div id="fichas"></div>
+        <dl>
+            <dt >Intentos</dt><!--contador intentos-->
+            <dd id="movimientos1"></dd>
+            <dt>Acertados</dt><!--contador aciertos-->
+            <dd id="aciertos1"></dd>
+            <dt>Tiempo</dt><!--temporizador-->
+            <dd id="cronometro1"><span id="minutos1">0</span>:<span id="segundos1">0</span></dd>
+        </dl>   
+
+
+      <!-- <div class="timeContainer" id="timeHtml">
         <p class="tiempo">Tiempo en segundos:</p>
         <div id='timer'></div>
-      </div>
+      </div> -->
       <div class="returnButton">
         <input type="image" class="startButton" src="img/botonInicio.png" id="startButtonHtml" alt="boton de inicio">
       </div>
@@ -122,6 +135,22 @@
       </div>
     </div>
     <div class="footerRoot"></div>
+
+
+    <form name="datos" id="datos" action="cartas.html"> <!--formulario de datos y bot�n-->
+      <div id="fichas"></div>
+      <dl>
+          <dt>Intentos</dt><!--contador intentos-->
+          <dd id="movimientos"></dd>
+          <dt>Acertados</dt><!--contador aciertos-->
+          <dd id="aciertos"></dd>
+          <dt>Tiempo</dt><!--temporizador-->
+          <dd id="cronometro"><span id="minutos">0</span>:<span id="segundos">0</span></dd>
+      </dl>   
+
+  
+
+
     <div class="timeContainer" id="timeHtml">
       <p class="tiempo">Tiempo en segundos:</p>
       <div id='timer'></div>

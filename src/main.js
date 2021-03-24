@@ -3,6 +3,7 @@ import App from './components/App.js';
 import AppCss from './components/AppCss.js';
 import AppJs from './components/AppJs.js';
 
+
 const buttonHtml =document.getElementById("buttonHtml"); 
 const startButtonHtml = document.getElementById("startButtonHtml");
 const buttonHtmlEnd =document.getElementById("buttonHtmlEnd");
@@ -85,8 +86,9 @@ startButtonJs.addEventListener("click", homePage);
           clearInterval(temporizador);
         }
 
-
+       
 
 document.getElementById("root").appendChild(App()); 
 document.getElementById("root1").appendChild(AppCss());
 document.getElementById("root2").appendChild(AppJs());
+

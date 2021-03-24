@@ -1,7 +1,7 @@
 
-/* .homePage {
+.homePage {
   display: none;
-} */
+}
 .htmlCategory {
   display: none;
 }
@@ -12,7 +12,7 @@
   display: none;
 }
 .endPage {
-  display: none;
+  display: block;
 }
 /* Diseño todas las páginas */
 * {
@@ -291,3 +291,7 @@ backface-visibility: hidden;
     transform: rotateY(360deg);
   } */
 
+dt, dd{
+  font-size: 30px;
+  color: #ffffff;
+}
