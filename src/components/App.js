@@ -58,14 +58,14 @@ for (let i = 0; i < board.length; i++) {
  return el;
 };
 
-function flipCard(){
+function flipCard(e){
   // Recuperamos el índice de la carta pulsada del data-atributo "cardIndex"
-  var cardIndex = parseInt(this.dataset.cardIndex);
-  console.log(this);
+  var cardIndex = parseInt(e.target.dataset.cardIndex);
+  console.log(e.target);
   // Coge la clase a utilizar (imagen a mostrar) del array board
   this.className = "";
   // Añade la carta a las actualmente seleccionadas
-  cardsInPlay.push({cardElement: this, cardIndex: cardIndex});
+  cardsInPlay.push({cardElement: e.target, cardIndex: cardIndex});
   // Comprueba si hay "match"
   // Se llama con setTimeout para dejar que el navegador muestre la carta girada primero
   setTimeout(testMatch, 100);
