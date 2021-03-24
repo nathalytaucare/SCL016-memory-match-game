@@ -1,54 +1,71 @@
+//
+// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
+// JavasSript que contenga el `export` correspondiente...
+//
+ //import pokemon from 'data\Data memoria\memoria.js';
+// console.log(pokemon);
 
+// import htmlNivelDos from '../data/htmlNivelDos/htmlNivelDos.js';
+// console.log(htmlNivelDos);
+
+//
+// O alternativamente podríamos cargar el JSON de forma asíncrona usando
+// `fetch` en el momento que consideremos necesario.
+//
+// fetch('./data/pokemon/pokemon.json')
+//   .then(resp => resp.json())
+//   .then(console.log)
+//   .catch(console.error);
+//
 import cssNivelUno from '../data/cssNivelUno/cssNivelUno.js';
-console.log(cssNivelUno);
-console.log(cssNivelUno.items[0].class);
+ console.log(cssNivelUno);
+// console.log(htmlNivelUno.items[0].class);
 let cardsInPlay= [];
 let board;
 const AppCss = () => {
 
   const el = document.createElement('div');
-  el.className = 'AppCss';
+  el.className = 'App';
   
   let cards = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
   
   board = [];
-
+//para barajar las cartas o hacer que las cartas aleatoria al recargar la pagina
   while(cards.length){
     board.push(cards.splice(Math.floor(Math.random() *cards.length), 1)[0]);
+
   }
+//realizamos un ciclo para iterar sobre cada una de las cartas y formar la mesa de juego
+
 
 for (let i = 0; i < board.length; i++) {
   
   const card= document.createElement("img");
   card.setAttribute("src", cssNivelUno.items[board[i]].image);
+  console.log(cssNivelUno.items[board[i]].image);
   card.setAttribute("class", "back1");
   // Establecemos un data-atributo "cardIndex" para identificar la carta
   // con el índice del array board
-  card.dataset.cardIndex = cssNivelUno.items[board[i]].class;
+ card.dataset.cardIndex = cssNivelUno.items[board[i]].class;
   card.addEventListener('click', flipCard);
   el.appendChild(card);
   
  }
- 
- 
-
-
-
-
  return el;
 };
 
-function flipCard(){
+function flipCard(e){
   // Recuperamos el índice de la carta pulsada del data-atributo "cardIndex"
-  var cardIndex = parseInt(this.dataset.cardIndex);
-  console.log(this);
+  console.log(e.target);
+  var cardIndex = parseInt(e.target.dataset.cardIndex);
+  console.log(cardIndex);
   // Coge la clase a utilizar (imagen a mostrar) del array board
-  this.className = "";
-  // Añade la carta a las actualmente seleccionadas
-  cardsInPlay.push({cardElement: this, cardIndex: cardIndex});
+  e.target.className = "";
+  // Añade la carta a las actualmente seleccionadas guaradr abietas
+  cardsInPlay.push({cardElement: e.target, cardIndex: cardIndex});
   // Comprueba si hay "match"
   // Se llama con setTimeout para dejar que el navegador muestre la carta girada primero
-  setTimeout(testMatch, 100);
+  setTimeout(testMatch, 300);
 }
 
 function testMatch(){
@@ -77,8 +94,8 @@ function match(){
 // No hay pareja
 function tryAgain(){
   // Se da vuelta a cierran las dos cartas
-  cardsInPlay[0].cardElement.className = 'back';
-  cardsInPlay[1].cardElement.className = 'back';
+  cardsInPlay[0].cardElement.className = 'back1';
+  cardsInPlay[1].cardElement.className = 'back1';
   // Inicia una nueva jugada
   cardsInPlay = [];
 }

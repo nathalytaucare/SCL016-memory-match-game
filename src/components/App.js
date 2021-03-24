@@ -36,6 +36,8 @@ const App = () => {
 
   }
 //realizamos un ciclo para iterar sobre cada una de las cartas y formar la mesa de juego
+
+
 for (let i = 0; i < board.length; i++) {
   
   const card= document.createElement("img");
@@ -44,7 +46,7 @@ for (let i = 0; i < board.length; i++) {
   card.setAttribute("class", "back");
   // Establecemos un data-atributo "cardIndex" para identificar la carta
   // con el índice del array board
-  card.dataset.cardIndex = htmlNivelUno.items[board[i]].class;
+ card.dataset.cardIndex = htmlNivelUno.items[board[i]].class;
   card.addEventListener('click', flipCard);
   el.appendChild(card);
   
@@ -58,17 +60,18 @@ for (let i = 0; i < board.length; i++) {
  return el;
 };
 
-function flipCard(){
+function flipCard(e){
   // Recuperamos el índice de la carta pulsada del data-atributo "cardIndex"
-  var cardIndex = parseInt(this.dataset.cardIndex);
-  console.log(this);
+  console.log(e.target);
+  var cardIndex = parseInt(e.target.dataset.cardIndex);
+  console.log(cardIndex);
   // Coge la clase a utilizar (imagen a mostrar) del array board
-  this.className = "";
-  // Añade la carta a las actualmente seleccionadas
-  cardsInPlay.push({cardElement: this, cardIndex: cardIndex});
+  e.target.className = "";
+  // Añade la carta a las actualmente seleccionadas guaradr abietas
+  cardsInPlay.push({cardElement: e.target, cardIndex: cardIndex});
   // Comprueba si hay "match"
   // Se llama con setTimeout para dejar que el navegador muestre la carta girada primero
-  setTimeout(testMatch, 100);
+  setTimeout(testMatch, 300);
 }
 
 function testMatch(){
