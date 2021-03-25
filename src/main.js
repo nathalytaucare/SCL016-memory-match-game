@@ -63,6 +63,20 @@ startButtonJs.addEventListener("click", homePage);
 
 
 //cronometro
+// var myVar = setInterval(myTimer, 1000);
+
+// function myTimer() {
+//   let tiempo=0;     
+//    tiempo++
+//                   document.getElementById('timer').innerHTML = tiempo;
+//                   if (tiempo==6) {
+//                     myStopFunction();
+//                   }
+// }
+
+// function myStopFunction() {
+//   clearInterval(myVar);
+// }
  window.onload = function() {
             // cargaCartas();
             temporizador();
@@ -77,9 +91,7 @@ startButtonJs.addEventListener("click", homePage);
                 if (tiempo==6) {
                   myStopFunction();
                 }
-            }, 1000);
-
-            
+            }, 1000); 
         }
         function myStopFunction() {
           clearInterval(temporizador);

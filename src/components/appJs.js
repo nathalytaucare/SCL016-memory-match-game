@@ -84,12 +84,14 @@ function testMatch(){
 }
 
 // Hay pareja
+
 function match(){
   // Eliminamos el controlador del evento click de las cartas
   cardsInPlay[0].cardElement.removeEventListener('click', flipCard);
   cardsInPlay[1].cardElement.removeEventListener('click', flipCard);
   // Inicia una nueva jugada
   cardsInPlay = [];
+
 }
 
 // No hay pareja

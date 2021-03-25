@@ -9,7 +9,7 @@ export default {
       { id: 'jsNivel2,3,1', image: 'cartas/JS nivel 2/azul.png', class:2 },
       { id: 'jsNivel2,3,2', image: 'cartas/JS nivel 2/azul1.png', class:2  },
       { id: 'jsNivel2,4,1', image: 'cartas/JS nivel 2/crema.png', class:3 },
-      { id: 'jsNivel2,4,2', image: 'cartas/JS nivel 2/\crema1.png', class:3 },
+      { id: 'jsNivel2,4,2', image: 'cartas/JS nivel 2/crema1.png', class:3 },
       { id: 'jsNivel2,5,1', image: 'cartas/JS nivel 2/lila.png' , class:4 },
       { id: 'jsNivel2,5,2', image: 'cartas/JS nivel 2/lila1.png' , class:4 },
       { id: 'jsNivel2,6,1', image: 'cartas/JS nivel 2/marron.png', class:5  },
