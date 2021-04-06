@@ -1,25 +1,24 @@
 
-import jsNivelUno from '../data/jsNivelUno/jsNivelUno.js';
+import cssNivelDos from '../data/cssNivelDos/cssNivelDos.js';
 
 let timer;
+let time = 0;
 let cardsInPlay= [];
-let board=[];
+let board =[];
 let cards = [0,1,2,3,4,5,6,7,8,9,10,11,12,13];
-let hits=0;
+let hits = 0;
 let startTime=0;
 let attempts=0;
 
 function timerF() {
-  let time = 0;
   timer = setInterval(() => {
-
     time++
-    document.getElementById('timerJs').innerHTML = time;
-    document.getElementById('timerEnd').innerHTML = time;
+    document.getElementById('timerCss2').innerHTML = time;
+    document.getElementById('timerEndFinal').innerHTML = time;
   }, 1000);
 }
 
-const AppJs = () => {
+const AppCssLevel2 = () => {
 
   const el = document.createElement('div');
   el.className = 'App';
@@ -30,19 +29,21 @@ const AppJs = () => {
 
   }
 //realizamos un ciclo para iterar sobre cada una de las cartas y formar la mesa de juego
+
+
 for (let i = 0; i < board.length; i++) {
   
   const card= document.createElement("img");
-  card.setAttribute("src", jsNivelUno.items[board[i]].image);
-  card.setAttribute("class", "back2");
+  card.setAttribute("src", cssNivelDos.items[board[i]].image);
+  // console.log(cssNivelDos.items[board[i]].image);
+  card.setAttribute("class", "back1");
   // Establecemos un data-atributo "cardIndex" para identificar la carta
   // con el índice del array board
- card.dataset.cardIndex = jsNivelUno.items[board[i]].class;
+ card.dataset.cardIndex = cssNivelDos.items[board[i]].class;
   card.addEventListener('click', flipCard);
   el.appendChild(card);
   
  }
-
  return el;
 };
 
@@ -50,7 +51,7 @@ function flipCard(e){
   startTime++;
   if(startTime==1) {
     timerF()
-  } 
+  }
   // Recuperamos el índice de la carta pulsada del data-atributo "cardIndex"
   var cardIndex = parseInt(e.target.dataset.cardIndex);
   // Coge la clase a utilizar (imagen a mostrar) del array board
@@ -66,8 +67,8 @@ function testMatch(){
   // Si no se han seleccionado dos cartas no hace nada
   if (cardsInPlay.length < 2) return;
   attempts++;
-  document.getElementById("attemptsJs").innerHTML=attempts;
-  document.getElementById("attempts").innerHTML=attempts;
+  document.getElementById("attemptsCss2").innerHTML=attempts;
+  document.getElementById("attemptsEnd").innerHTML=attempts;
   // Comprueba si las cartas seleccionadas son iguales y llama
   // a la función correspondiente
   if (board[cardsInPlay[0].cardIndex] === board[cardsInPlay[1].cardIndex]){
@@ -86,36 +87,25 @@ function match(){
   // Inicia una nueva jugada
   cardsInPlay = [];
   hits++;
-  document.getElementById("hitsJs").innerHTML=hits;
+  document.getElementById("hitsCss2").innerHTML=hits;
 if (hits==7) {
-    document.querySelector(".endPage").style.display="block";
-    document.querySelector(".jsCategory").style.display="none";
-    const newLevel =document.getElementById("buttonNewLevel");
-    newLevel.addEventListener("click",leveltwo);
+  // aciertos=0;
+    document.querySelector(".endPageFinal").style.display="block";
+    document.querySelector(".cssCategoryLevel2").style.display="none";
     myStopFunction();
-  
+    
  }
-
-}
-function leveltwo(){
-  document.querySelector(".endPage").style.display="none";
-  document.querySelector(".jsCategoryLevel2").style.display="block";
 }
 function myStopFunction() {
   clearInterval(timer);
 }
-
 // No hay pareja
-
 function tryAgain(){
   // Se da vuelta a cierran las dos cartas
-  cardsInPlay[0].cardElement.className = 'back2';
-  cardsInPlay[1].cardElement.className = 'back2';
+  cardsInPlay[0].cardElement.className = 'back1';
+  cardsInPlay[1].cardElement.className = 'back1';
   // Inicia una nueva jugada
   cardsInPlay = [];
-
-    // document.getElementsByName("aciertos");
 }
 
-
-export default AppJs;
+export default AppCssLevel2;

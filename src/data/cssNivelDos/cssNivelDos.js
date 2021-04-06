@@ -1,5 +1,4 @@
 export default {
-    
     name: 'cssNivelDos',
     items: [                        
       { id: 'cssNivel2,1,1', image: 'cartas/CSSNivel2/agua.png', class:0 },
