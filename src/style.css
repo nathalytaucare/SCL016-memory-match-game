@@ -1,0 +1,358 @@
+/* .homePage {
+  display: none;
+}  */
+.htmlCategory {
+  display: none;
+}
+.cssCategory {
+  display: none;
+}
+
+.jsCategory {
+  display: none;
+}
+.endPage {
+  display: none;
+}
+.endPageFinal {
+  display: none;
+}
+.htmlCategoryLevel2 {
+  display: none;
+}
+.cssCategoryLevel2 {
+  display: none;
+}
+.jsCategoryLevel2 {
+  display: none;
+}
+/* Diseño todas las páginas */
+* {
+  margin: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(img/fondo.png); /* Ubicación de la imagen */
+  background-repeat: no-repeat;
+  background-position: center center; /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
+  background-attachment: fixed; /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+  background-size: cover; /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+  background-color: purple; /* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
+}
+
+header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+/* Página de inicio */
+
+.robot {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-self: center;
+}
+.imgLogo {
+  width: 100%;
+  max-width: 130px;
+  height: 130px;
+  background-size: cover;
+}
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+}
+.titleHomePage {
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  color: #ffffff;
+  justify-content: center;
+  align-self: center;
+}
+.subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+}
+.subtitleHomePage {
+  display: flex;
+  width: 100%;
+  max-width: 856px;
+  height: 42px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  color: #ffffff;
+}
+
+.rootbuttons {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  width: auto;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.HTML,
+.JS {
+  align-self: flex-end;
+}
+.buttonHTML,
+.buttonJS,
+.buttonCSS {
+  width: 180px;
+}
+
+/* Página categoria Html */
+
+.halfRobot {
+  width: 100%;
+  max-width: 100px;
+  min-width: 20px;
+  height: 100px;
+  background-size: cover;
+}
+
+.gameTable {
+  width: 100%;
+  max-width: 1450px;
+  height: 380px;
+  background: rgba(19, 114, 167, 0.4);
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-size: cover;
+}
+
+p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  color: #0689ff;
+  text-align: justify; /* responsive*/
+}
+
+.topRoot {
+  flex-wrap: wrap;
+  color: #ffffff;
+  display: flex;
+}
+
+.timeContainer {
+  float: left; /* uno al lado del otro*/
+  text-align: right;
+  width: 50%;
+  height: 59px;
+  font-size: 50px;
+  line-height: 59px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.startButton {
+  width: 11%;
+  height: 50px;
+  display: flex;
+  box-sizing: border-box;
+  justify-self: flex-end;
+}
+
+/* Página final */
+
+.blockWin {
+  width: 90%;
+  margin: auto;
+  height: 450px;
+  flex-direction: column;
+  background: url(img/fondoGanador.png);
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+}
+
+.titlesEndPage {
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+}
+
+.subtitleEndPage {
+  width: 100%;
+  max-width: 1000px;
+  height: 42px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  color: #ffffff;
+}
+
+.newLevel {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonNewLevel {
+  width: 200px;
+  height: 80px;
+}
+
+.rootbuttonsEnd {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: flex-end;
+  width: auto;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.returnButtonEnd {
+  display: flex;
+  justify-content: center;
+}
+.startButtonEnd {
+  width: 15%;
+  height: 50px;
+  margin: 20px;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 140%;
+  max-width: 1400px;
+  height: 352px;
+  background-size: cover;
+  justify-content: space-around;
+  align-content: center;
+}
+
+img.back {
+  content: url("img/HTML.png");
+}
+img.back1 {
+  content: url("img/CSS.png");
+}
+img.back2 {
+  content: url("img/JS.png");
+}
+.carta1,
+.carta2,
+.carta3,
+.carta4,
+.carta5,
+.carta6,
+.carta7,
+.carta8 {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: rotateY(0deg);
+  transition: all 0.3s linear;
+}
+
+.root {
+  position: relative;
+}
+
+.back,
+.front {
+  max-width: 130px;
+  min-width: 40px;
+  margin: 24px 10px;
+}
+.App {
+  width: 100%;
+  max-width: 1400px;
+  height: 350px;
+}
+
+/* para dar zoom a las cartas al darle un click */
+.front {
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  transform: scale(1.3);
+}
+.returnButton {
+  display: flex;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 670px) {
+  * {
+    margin: 11px;
+    padding-left: 1px;
+    padding-right: 1px;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 320px;
+    height: 568px;
+  }
+  .imgLogo {
+    width: 56px;
+    height: 71px;
+    margin-top: -25px;
+  }
+  .title {
+    font-size: 13px;
+    margin-top: 0px;
+    margin-left: 10px;
+    /* display: none; */
+  }
+  .App {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: -5px;
+    margin-left: 14px;
+  }
+  .gameTable {
+    background-color: transparent;
+  }
+  .root,
+  .root1,
+  .root2 {
+    margin-top: -13px;
+    margin-left: -10px;
+    margin-bottom: 38px;
+    margin-right: -42px;
+    height: 300px;
+    width: 300px;
+  }
+  .buttonHTML,
+  .buttonJS,
+  .buttonCSS {
+    width: 78px;
+    height: 78px;
+    display: block;
+  }
+}

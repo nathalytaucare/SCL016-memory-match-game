@@ -1,15 +1,306 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Memory Card</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Memory Code</title>
+  <meta name="viewport" content="width=device-width,   initial-scale=1.0">
+  <meta http-equiv="Cache-control" content="public">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Pagina de inicio -->
+  <div class="homePage">
     <header>
-      <h1>Memory Card</h1>
+      <div class="robot">
+        <img class="imgLogo" src="img/logoRobot.png" alt="logo de un robot">
+      </div>
+      <div class="title">
+        <h1 class="titleHomePage">MEMORY CODE</h1>
+      </div>
+      <div class="subtitle">
+        <h2 class="subtitleHomePage">Aprende a programar divirtiendote</h2>
+      </div>
     </header>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+    <main>
+      <div id="rootbuttons" class="rootbuttons">
+        <div class="HTML">
+          <input type="image" src="img/botonHTML.png" alt="boton para ingresar a HTML" class="buttonHTML"
+            id="buttonHtml">
+        </div>
+        <div class="CSS">
+          <input type="image" src="img/botonCSS.png" alt="Boton para ingresar a CSS" class="buttonCSS" id="buttonCss">
+        </div>
+        <div class="JS">
+          <input type="image" src="img/botonJS.png" alt="boton para ingresar a JS" class="buttonJS" id="buttonJs">
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- categoria Html-->
+  <div class="htmlCategory">
+    <header>
+      <div class="robot">
+        <img src="img/mitadRobot.png" class="halfRobot" alt="imagen de robot">
+      </div>
+      <div class="title">
+        <h1 class="titleHomePage">MEMORY CODE</h1>
+      </div>
+      <div class="subtitle">
+        <p>Memoriza los pares</p>
+      </div>
+    </header>
+    <main>
+      <div class="topRoot">
+        <!--contador aciertos-->
+        <h4>Hits: <span id="hitsHtml"></span></h4>
+        <!--temporizador-->
+        <h4>Time:<span id="timerHtml"></span>segs</h4>
+        <!-- intentos -->
+        <h4>Attempts:<span id="attemptsHtml"></span></h4>
+      </div>
+      <div class="gameTable">
+        <div id="root">
+        </div>
+      </div>
+      <div class="returnButton">
+        <input type="image" class="startButton" src="img/botonInicio.png" id="startButtonHtml" alt="boton de inicio">
+      </div>
+    </main>
+  </div>
+
+  <!-- categoria Html Nivel 2-->
+  <div class="htmlCategoryLevel2">
+    <header>
+      <div class="robot">
+        <img src="img/mitadRobot.png" class="halfRobot" alt="imagen de robot">
+      </div>
+      <div class="title">
+        <h1 class="titleHomePage">MEMORY CODE</h1>
+        <h3 class="titleHomePage">Nivel 2 Html</h3>
+      </div>
+      <div class="subtitle">
+        <p>Memoriza los pares</p>
+      </div>
+    </header>
+    <main>
+      <div class="topRoot">
+        <!--contador aciertos-->
+        <h4>Aciertos: <span id="hitsHtml2"></span></h4>
+        <!--temporizador-->
+        <h4>Tiempo:<span id="timerHtml2"></span>segs</h4>
+        <h4>Attempts:<span id="attemptsHtml2"></span></h4>
+      </div>
+      <div class="gameTable">
+        <div id="root3">
+        </div>
+      </div>
+      <div class="returnButton">
+        <input type="image" class="startButton" src="img/botonInicio.png" id="startHtmlLevel2" alt="boton de inicio">
+      </div>
+
+    </main>
+  </div>
+
+
+  <!-- categoria Css-->
+  <div class="cssCategory">
+    <header>
+      <div class="robot">
+        <img src="img/mitadRobot.png" class="halfRobot" alt="imagen de robot">
+      </div>
+      <div class="title">
+        <h1 class="titleHomePage">MEMORY CODE</h1>
+      </div>
+      <div class="subtitle">
+        <p>Memoriza los pares</p>
+      </div>
+    </header>
+    <main>
+      <div class="topRoot">
+        <!--contador aciertos-->
+        <h4>Aciertos: <span id="hitsCss"></span></h4>
+        <!--temporizador-->
+        <h4>Tiempo:<span id="timerCss"></span>segs</h4>
+        <h4>Attempts:<span id="attemptsCss"></span></h4>
+      </div>
+      <div class="gameTable">
+        <div id="root1">
+        </div>
+      </div>
+      <div class="returnButton">
+        <input type="image" class="startButton" src="img/botonInicio.png" id="startButtonCss" alt="boton de inicio">
+      </div>
+    </main>
+  </div>
+  <!-- categoria Css Nivel 2-->
+  <div class="cssCategoryLevel2">
+    <header>
+      <div class="robot">
+        <img src="img/mitadRobot.png" class="halfRobot" alt="imagen de robot">
+      </div>
+      <div class="title">
+        <h1 class="titleHomePage">MEMORY CODE</h1>
+        <h3 class="titleHomePage">Nivel 2 Css</h3>
+      </div>
+      <div class="subtitle">
+        <p>Memoriza los pares</p>
+      </div>
+    </header>
+    <main>
+      <div class="topRoot">
+        <!--contador aciertos-->
+        <h4>Aciertos: <span id="hitsCss2"></span></h4>
+        <!--temporizador-->
+        <h4>Tiempo:<span id="timerCss2"></span>segs</h4>
+        <h4>Attempts:<span id="attemptsCss2"></span></h4>
+      </div>
+      <div class="gameTable">
+        <div id="root4">
+        </div>
+      </div>
+      <div class="returnButton">
+        <input type="image" class="startButton" src="img/botonInicio.png" id="startCssLevel2" alt="boton de inicio">
+      </div>
+
+    </main>
+  </div>
+
+
+
+  <!-- categoria Js-->
+  <div class='jsCategory'>
+    <header>
+      <div class="robot">
+        <img src="img/mitadRobot.png" class="halfRobot" alt="imagen de robot">
+      </div>
+      <div class="title">
+        <h1 class="titleHomePage">MEMORY CODE</h1>
+      </div>
+      <div class="subtitle">
+        <p>Memoriza los pares</p>
+      </div>
+    </header>
+    <main>
+      <div class="topRoot">
+        <!--contador aciertos-->
+        <h4>Aciertos: <span id="hitsJs"></span></h4>
+        <!--temporizador-->
+        <h4>Tiempo:<span id="timerJs"></span>segs</h4>
+        <h4>Attempts:<span id="attemptsJs"></span></h4>
+      </div>
+      <div class="gameTable">
+        <div id="root2">
+        </div>
+      </div>
+      <div class="returnButton">
+        <input type="image" class="startButton" src="img/botonInicio.png" id="startButtonJs" alt="boton de inicio">
+      </div>
+    </main>
+  </div>
+  <!-- categoria Js Nivel2-->
+  <div class="jsCategoryLevel2">
+    <header>
+      <div class="robot">
+        <img src="img/mitadRobot.png" class="halfRobot" alt="imagen de robot">
+      </div>
+      <div class="title">
+        <h1 class="titleHomePage">MEMORY CODE</h1>
+        <h3 class="titleHomePage">Nivel 2 JS</h3>
+      </div>
+      <div class="subtitle">
+        <p>Memoriza los pares</p>
+      </div>
+    </header>
+    <main>
+      <div class="topRoot">
+        <!--contador aciertos-->
+        <h4>Aciertos: <span id="hitsJs2"></span></h4>
+        <!--temporizador-->
+        <h4>Tiempo:<span id="timerJs2"></span>segs</h4>
+        <h4>Attempts:<span id="attemptsJs2"></span></h4>
+      </div>
+      <div class="gameTable">
+        <div id="root5">
+        </div>
+      </div>
+      <div class="returnButton">
+        <input type="image" class="startButton" src="img/botonInicio.png" id="starJsLevel2" alt="boton de inicio">
+      </div>
+    </main>
+  </div>
+
+
+
+  <!-- ventana final -->
+  <div class="endPage">
+    <header>
+      <div class="robot">
+        <img src="img/mitadRobot.png" class="halfRobot" alt="imagen de robot">
+      </div>
+      <div class="title">
+        <h1 class="titleHomePage">MEMORY CODE</h1>
+      </div>
+    </header>
+    <main>
+      <div class="blockWin">
+        <div class="titlesEndPage">
+          <div class="subtitle">
+            <h2 class="subtitleEndPage"> ¡Felicitaciones has pasado al siguiente nivel!</h2>
+          </div>
+          <div class="subtitle">
+            <h2 class="subtitleEndPage">¿estas listo?</h2>
+          </div>
+          <div class="subtitle">
+            <h3 class="subtitleEndPage">Time: <span id="timerEnd"></span><span>segs</span></h3>
+            <h3 class="subtitleEndPage">Attempts:<span id="attempts"></span></h3>
+          </div>
+          <div class="newLevel">
+            <input type="image" src="img/comencemos.png" class="buttonNewLevel" id="buttonNewLevel"
+              alt="boton para avanzar de nivel">
+          </div>
+          <div class="returnButtonEnd">
+            <input type="image" class="startButtonEnd" src="img/botonInicio.png" id="startButton" alt="boton de inicio">
+          </div>
+        </div>
+    </main>
+  </div>
+
+
+  <div class="endPageFinal" id="endPageFinal">
+    <header>
+      <div class="robot">
+        <img src="img/mitadRobot.png" class="halfRobot" alt="imagen de robot">
+      </div>
+      <div class="title">
+        <h1 class="titleHomePage">MEMORY CODE</h1>
+      </div>
+    </header>
+    <main>
+      <div class="blockWin">
+        <div class="titlesEndPage">
+          <div class="subtitle">
+            <h2 class="subtitleEndPage"> ¡Felicitaciones reto superado!</h2>
+          </div>
+          <div class="subtitle">
+            <h3 class="subtitleEndPage">Tiempo realizado: <span id="timerEndFinal"></span><span>segs</span></h3>
+            <h3 class="subtitleEndPage">Attempts:<span id="attemptsEnd"></span></h3>
+          </div>
+          <div class="subtitle">
+            <h2 class="subtitleEndPage">¿Ahora te toca probar tus conocimientos en otra categoría?</h2>
+          </div>
+        </div>
+        <div class="returnButtonEnd">
+          <input type="image" class="startButtonEnd" src="img/botonInicio.png" id="startButtonEnd"
+            alt="boton de inicio">
+        </div>
+    </main>
+  </div>
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
