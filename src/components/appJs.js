@@ -4,7 +4,7 @@ import jsNivelUno from '../data/jsNivelUno/jsNivelUno.js';
 let timer;
 let cardsInPlay= [];
 let board=[];
-let cards = [0,1,2,3,4,5,6,7,8,9,10,11,12,13];
+let cards = [0,1,2,3,4,5,6,7,8,9,10,11];
 let hits=0;
 let startTime=0;
 let attempts=0;
@@ -87,7 +87,7 @@ function match(){
   cardsInPlay = [];
   hits++;
   document.getElementById("hitsJs").innerHTML=hits;
-if (hits==7) {
+if (hits==6) {
     document.querySelector(".endPage").style.display="block";
     document.querySelector(".jsCategory").style.display="none";
     const newLevel =document.getElementById("buttonNewLevel");

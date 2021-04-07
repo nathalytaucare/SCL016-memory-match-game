@@ -23,7 +23,7 @@ let timer=0;
 let time = 0;
 let cardsInPlay = [];
 let board = [];
-let cards = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+let cards = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 let hits = 0;
 let startTime=0;
 let attempts=0;
@@ -35,6 +35,7 @@ function timerF() {
     document.getElementById('timerEnd').innerHTML = time;
   }, 1000);
 }
+
 export const App = () => {
   const el = document.createElement('div');
   el.className = 'App';
@@ -54,7 +55,11 @@ export const App = () => {
     card.setAttribute("class", "back");
     // Establecemos un data-atributo "cardIndex" para identificar la carta
     // con el índice del array board
+    // console.log(board);
     card.dataset.cardIndex = htmlNivelUno.items[board[i]].class;
+    // console.log(htmlNivelUno);
+    // console.log(htmlNivelUno.items[board[i]].class);
+    // console.log(card);
     card.addEventListener('click', flipCard);
     el.appendChild(card);
   }
@@ -80,6 +85,7 @@ function flipCard(e) {
   e.target.className = "front";
   // Añade la carta a las actualmente seleccionadas guaradr abietas
   cardsInPlay.push({ cardElement: e.target, cardIndex: cardIndex });
+  console.log(cardsInPlay);
   // Comprueba si hay "match"
   // Se llama con setTimeout para dejar que el navegador muestre la carta girada primero
   setTimeout(testMatch, 300);
@@ -110,7 +116,7 @@ function match() {
   cardsInPlay = [];
   hits++;
   document.getElementById("hitsHtml").innerHTML = hits;
-  if (hits == 7) {
+  if (hits == 6) {
     document.querySelector(".endPage").style.display = "block";
     document.querySelector(".htmlCategory").style.display = "none";
     const newLevel = document.getElementById("buttonNewLevel");
