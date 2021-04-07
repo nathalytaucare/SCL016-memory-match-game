@@ -118,7 +118,7 @@ header {
   width: 180px;
 }
 
-/* Página categoria Html */
+/* Página categorias */
 
 .halfRobot {
   width: 100%;
@@ -129,16 +129,11 @@ header {
 }
 
 .gameTable {
-  width: 100%;
-  max-width: 1450px;
-  height: 380px;
+  /* width: 100%; */
+  max-width: 1400px;
+  height: auto;
   background: rgba(19, 114, 167, 0.4);
   border-radius: 100px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-size: cover;
 }
 
 p {
@@ -220,34 +215,25 @@ p {
   height: 80px;
 }
 
-.rootbuttonsEnd {
-  flex-wrap: wrap;
-  justify-content: center;
-  align-self: flex-end;
-  width: auto;
-  height: 250px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
 .returnButtonEnd {
   display: flex;
   justify-content: center;
 }
 .startButtonEnd {
-  width: 15%;
-  height: 50px;
+  width: 17%;
+  height: 60px;
   margin: 20px;
 }
+
+/* Cartas de la base de datos */
 
 .App {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 140%;
+  width: 100%;
   max-width: 1400px;
-  height: 352px;
+  height: auto;
   background-size: cover;
   justify-content: space-around;
   align-content: center;
@@ -262,37 +248,14 @@ img.back1 {
 img.back2 {
   content: url("img/JS.png");
 }
-.carta1,
-.carta2,
-.carta3,
-.carta4,
-.carta5,
-.carta6,
-.carta7,
-.carta8 {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  transform: rotateY(0deg);
-  transition: all 0.3s linear;
-}
-
-.root {
-  position: relative;
-}
 
 .back,
+.back1,
+.back2,
 .front {
-  max-width: 130px;
+  max-width: 150px;
   min-width: 40px;
-  margin: 24px 10px;
-}
-.App {
-  width: 100%;
-  max-width: 1400px;
-  height: 350px;
+  margin: 24px 20px;
 }
 
 /* para dar zoom a las cartas al darle un click */
@@ -306,53 +269,109 @@ img.back2 {
   display: flex;
   justify-content: flex-end;
 }
-@media screen and (max-width: 670px) {
+
+@media screen and (max-width: 480px) {
   * {
-    margin: 11px;
+    margin: 2px;
     padding-left: 1px;
     padding-right: 1px;
-    box-sizing: border-box;
   }
-
   body {
-    width: 320px;
+    width: 100%;
     height: 568px;
   }
+
+  /* pagina inicio */
+
   .imgLogo {
-    width: 56px;
-    height: 71px;
-    margin-top: -25px;
+    margin-top: 20px;
+    width: 60px;
+    height: 90px;
   }
-  .title {
-    font-size: 13px;
-    margin-top: 0px;
-    margin-left: 10px;
-    /* display: none; */
+  .subtitleHomePage {
+    font-family: Roboto;
+    font-size: 22px;
+    line-height: 42px;
+    color: #ffffff;
   }
-  .App {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin-top: -5px;
-    margin-left: 14px;
+  .rootbuttons {
+    margin-top: 50px;
+    height: 250px;
   }
-  .gameTable {
-    background-color: transparent;
-  }
-  .root,
-  .root1,
-  .root2 {
-    margin-top: -13px;
-    margin-left: -10px;
-    margin-bottom: 38px;
-    margin-right: -42px;
-    height: 300px;
-    width: 300px;
-  }
+
   .buttonHTML,
   .buttonJS,
   .buttonCSS {
-    width: 78px;
-    height: 78px;
+    width: 100px;
+    height: 100px;
     display: block;
+  }
+
+  /* paginas de cartas */
+
+  .halfRobot {
+    width: 50px;
+    height: 50px;
+  }
+  .title {
+    font-size: 10px;
+  }
+  p {
+    font-family: Roboto;
+    font-size: 20px;
+    color: #0689ff;
+    text-align: justify; /* responsive*/
+  }
+  h4 {
+    font-size: 15px;
+  }
+  .gameTable {
+    margin-top: 10px;
+    width: 100%;
+    height: 350px;
+    background: rgba(19, 114, 167, 0.4);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-size: cover;
+  }
+  .App {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    justify-content: space-around;
+    align-content: center;
+  }
+  .back,
+  .back1,
+  .back2,
+  .front {
+    width: 65px;
+    margin: 15px 10px;
+  }
+  .startButton {
+    width: 14%;
+    height: 40px;
+  }
+  .subtitleEndPage {
+    margin-top: 10%;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .buttonNewLevel {
+    width: 120px;
+    height: 50px;
+  }
+
+  .startButtonEnd {
+    width: 35%;
+    height: 40px;
+    margin: 20px;
   }
 }

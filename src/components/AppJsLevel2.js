@@ -2,7 +2,7 @@
 import jsNivelDos from '../data/jsNivelDos/jsNivelDos.js';
 
 let timer;
-let cards = [0,1,2,3,4,5,6,7,8,9,10,11,12,13];
+let cards = [0,1,2,3,4,5,6,7,8,9,10,11];
 let cardsInPlay= [];
 let board=[];
 let hits=0;
@@ -87,7 +87,7 @@ function match(){
   cardsInPlay = [];
   hits++;
   document.getElementById("hitsJs2").innerHTML=hits;
-if (hits==7) {
+if (hits==6) {
     document.querySelector(".endPageFinal").style.display="block";
     document.querySelector(".jsCategoryLevel2").style.display="none";
     myStopFunction();
